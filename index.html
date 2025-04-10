@@ -22,6 +22,9 @@
     }
 
     img {
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  user-select: none;
       width: 100%;
       height: auto;
       display: block;
@@ -51,7 +54,7 @@
     }
     </style>
 </head>
-<body>
+<body oncontextmenu="return false;">
 <div class="container">
 <!-- 여기에 이미지들 쭉 나열하면 됩니다 -->
 <img alt="1" src="images/1.png" style="margin: 0;"/>
