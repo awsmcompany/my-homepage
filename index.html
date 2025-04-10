@@ -22,10 +22,6 @@
     }
 
     img {
-  -webkit-user-select: none;
-  -webkit-touch-callout: none;
-  user-select: none;
-
       width: 100%;
       height: auto;
       display: block;
@@ -36,11 +32,29 @@
       font-size: 1.8em;
       margin-bottom: 40px;
     }
-  </style>
-</head>
-<body oncontextmenu="return false;">
-<div class="container">
+  
+    /* 모바일 스크롤바 스타일 */
+    body::-webkit-scrollbar {
+      width: 6px;
+    }
 
+    body::-webkit-scrollbar-track {
+      background: #eee;
+    }
+
+    body::-webkit-scrollbar-thumb {
+      background-color: #888;
+      border-radius: 4px;
+    }
+
+    body::-webkit-scrollbar-thumb:hover {
+      background-color: #555;
+    }
+    </style>
+</head>
+<body>
+<div class="container">
+<h1>어썸네온</h1>
 <!-- 여기에 이미지들 쭉 나열하면 됩니다 -->
 <img alt="1" src="images/1.png"/>
 <img alt="2" src="images/2.jpg"/>
