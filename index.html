@@ -1,132 +1,139 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>어썸네온</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Noto Sans KR', sans-serif;
-      background: #fff;
-      text-align: center;
-    }
-    .container {
-      max-width: 768px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    img {
-      -webkit-user-select: none;
-      -webkit-touch-callout: none;
-      user-select: none;
-      width: 100%;
-      height: auto;
-      display: block;
-      margin-bottom: 20px;
-    }
-    .slideshow-container {
-      width: 500px;
-      margin: 0 auto 30px auto;
-      overflow: hidden;
-    }
-    .slideshow-track {
-      display: flex;
-      width: max-content;
-      animation: scroll 48s linear infinite;
-    }
-    .slideshow-track img {
-      width: 500px;
-      height: auto;
-      flex-shrink: 0;
-      object-fit: contain;
-    }
-    @keyframes scroll {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-12000px);
-      }
-    }
-    .kakao-link {
-      display: inline-block;
-      background-color: #fee500;
-      color: #000;
-      padding: 10px 20px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-bottom: 30px;
-    }
-  </style>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>어썸네온</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    background: #fff;
+    text-align: center;
+  }
+  .container {
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  img {
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    user-select: none;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+  }
+  .slideshow {
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+    margin: 0 auto 20px auto;
+    position: relative;
+  }
+  .slides-wrapper {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    height: 100%;
+  }
+  .slides-wrapper img {
+    width: 500px;
+    height: 500px;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+  .kakao-link {
+    display: inline-block;
+    background-color: #fee500;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+</style>
 </head>
 <body oncontextmenu="return false;">
-  <div class="container">
+<div class="container">
 
-    <!-- 카카오톡 링크 -->
-    <a class="kakao-link" href="https://pf.kakao.com/_yourchannel/chat" target="_blank">
-      💬 카카오톡 1:1 문의하기
-    </a>
+  <!-- 카카오톡 채팅 링크 -->
+  <a class="kakao-link" href="https://pf.kakao.com/_yourchannel/chat" target="_blank">
+    💬 카카오톡 1:1 문의하기
+  </a>
 
-    <!-- 슬라이드쇼 시작 -->
-    <div class="slideshow-container">
-      <div class="slideshow-track">
-        <!-- 이미지 1~24까지 반복 삽입 -->
-        <img src="images/slide1.jpg" alt="슬라이드1">
-<img src="images/slide2.jpg" alt="슬라이드2">
-<img src="images/slide3.jpg" alt="슬라이드3">
-<img src="images/slide4.jpg" alt="슬라이드4">
-<img src="images/slide5.jpg" alt="슬라이드5">
-<img src="images/slide6.jpg" alt="슬라이드6">
-<img src="images/slide7.jpg" alt="슬라이드7">
-<img src="images/slide8.jpg" alt="슬라이드8">
-<img src="images/slide9.jpg" alt="슬라이드9">
-<img src="images/slide10.jpg" alt="슬라이드10">
-<img src="images/slide11.jpg" alt="슬라이드11">
-<img src="images/slide12.jpg" alt="슬라이드12">
-<img src="images/slide13.jpg" alt="슬라이드13">
-<img src="images/slide14.jpg" alt="슬라이드14">
-<img src="images/slide15.jpg" alt="슬라이드15">
-<img src="images/slide16.jpg" alt="슬라이드16">
-<img src="images/slide17.jpg" alt="슬라이드17">
-<img src="images/slide18.jpg" alt="슬라이드18">
-<img src="images/slide19.jpg" alt="슬라이드19">
-<img src="images/slide20.jpg" alt="슬라이드20">
-<img src="images/slide21.jpg" alt="슬라이드21">
-<img src="images/slide22.jpg" alt="슬라이드22">
-<img src="images/slide23.jpg" alt="슬라이드23">
-<img src="images/slide24.jpg" alt="슬라이드24">
-      </div>
+  <img alt="1" src="images/1.png" />
+  <img alt="2" src="images/2.png" />
+  <img alt="3" src="images/3.gif" />
+  <img alt="4" src="images/4.png" />
+  <img alt="5" src="images/5.png" />
+  <img alt="5-1" src="images/5-1.jpg" />
+  <img alt="6" src="images/6.png" />
+  <img alt="7" src="images/7.png" />
+  <img alt="8" src="images/8.png" />
+  <img alt="9" src="images/9.png" />
+  <img alt="10" src="images/10.png" />
+  <img alt="11" src="images/11.png" />
+  <img alt="12" src="images/12.png" />
+  <img alt="13" src="images/13.png" />
+  <img alt="14" src="images/14.png" />
+  <img alt="15" src="images/15.png" />
+  <img alt="16" src="images/16.png" />
+  <img alt="17" src="images/17.png" />
+  <img alt="18" src="images/18.png" />
+  <img alt="19" src="images/19.png" />
+  <img alt="20" src="images/20.png" />
+  <img alt="21" src="images/21.png" />
+  <img alt="21-1" src="images/21-1.jpg" />
+
+  <!-- 슬라이드쇼 시작 -->
+  <div class="slideshow">
+    <div class="slides-wrapper" id="slideWrapper">
+      <img src="images/slide1.jpg" alt="슬라이드1">
+      <img src="images/slide2.jpg" alt="슬라이드2">
+      <img src="images/slide3.jpg" alt="슬라이드3">
+      <img src="images/slide4.jpg" alt="슬라이드4">
+      <img src="images/slide5.jpg" alt="슬라이드5">
+      <img src="images/slide6.jpg" alt="슬라이드6">
+      <img src="images/slide7.jpg" alt="슬라이드7">
+      <img src="images/slide8.jpg" alt="슬라이드8">
+      <img src="images/slide9.jpg" alt="슬라이드9">
+      <img src="images/slide10.jpg" alt="슬라이드10">
+      <img src="images/slide11.jpg" alt="슬라이드11">
+      <img src="images/slide12.jpg" alt="슬라이드12">
+      <img src="images/slide13.jpg" alt="슬라이드13">
+      <img src="images/slide14.jpg" alt="슬라이드14">
+      <img src="images/slide15.jpg" alt="슬라이드15">
+      <img src="images/slide16.jpg" alt="슬라이드16">
+      <img src="images/slide17.jpg" alt="슬라이드17">
+      <img src="images/slide18.jpg" alt="슬라이드18">
+      <img src="images/slide19.jpg" alt="슬라이드19">
+      <img src="images/slide20.jpg" alt="슬라이드20">
+      <img src="images/slide21.jpg" alt="슬라이드21">
+      <img src="images/slide22.jpg" alt="슬라이드22">
+      <img src="images/slide23.jpg" alt="슬라이드23">
+      <img src="images/slide24.jpg" alt="슬라이드24">
     </div>
-    <!-- 슬라이드쇼 끝 -->
-
-    <!-- 기존 이미지들 나열 -->
-<img src="images/1.jpg" alt="1">
-<img src="images/2.jpg" alt="2">
-<img src="images/3.jpg" alt="3">
-<img src="images/4.jpg" alt="4">
-<img src="images/5.jpg" alt="5">
-<img src="images/6.jpg" alt="6">
-<img src="images/7.jpg" alt="7">
-<img src="images/8.jpg" alt="8">
-<img src="images/9.jpg" alt="9">
-<img src="images/10.jpg" alt="10">
-<img src="images/11.jpg" alt="11">
-<img src="images/12.jpg" alt="12">
-<img src="images/13.jpg" alt="13">
-<img src="images/14.jpg" alt="14">
-<img src="images/15.jpg" alt="15">
-<img src="images/16.jpg" alt="16">
-<img src="images/17.jpg" alt="17">
-<img src="images/18.jpg" alt="18">
-<img src="images/19.jpg" alt="19">
-<img src="images/20.jpg" alt="20">
-<img src="images/21.jpg" alt="21">
-<img src="images/21-1.jpg" alt="21-1">
-<img src="images/22-1.jpg" alt="22-1">
   </div>
+  <!-- 슬라이드쇼 끝 -->
+
+  <img alt="22-1" src="images/22-1.jpg" />
+  <img alt="23" src="images/23.png" />
+  <img alt="24" src="images/24.png" />
+  <img alt="25" src="images/25.png" />
+  <img alt="26" src="images/26.png" />
+</div>
+<script>
+  const slideWrapper = document.getElementById('slideWrapper');
+  const slideCount = slideWrapper.children.length;
+  let currentIndex = 0;
+
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % slideCount;
+    slideWrapper.style.transform = `translateX(-${currentIndex * 500}px)`;
+  }, 3000);
+</script>
 </body>
 </html>
