@@ -138,8 +138,10 @@
     animation: slide 9s infinite;
   }
   .slides img {
-    width: 100%;
-    flex-shrink: 0;
+  width: 100%;
+  height: 300px; /* 또는 원하는 고정 높이 */
+  object-fit: cover;
+  flex-shrink: 0;
   }
   @keyframes slide {
     0% { transform: translateX(0%); }
