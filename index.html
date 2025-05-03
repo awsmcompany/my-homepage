@@ -73,14 +73,14 @@
   position: relative;
   max-width: 768px;
   margin: auto;
-  height: 300px;
+  height: 500px;
   overflow: hidden;
 }
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  max-height: 300px;
+  max-height: 500px;
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
@@ -93,20 +93,17 @@
   position: relative;
   width: 100%;
   max-width: 768px;
-  height: 300px;
+  height: 500px;
   margin: 0 auto 20px auto;
   overflow: hidden;
 }
 .js-slideshow .slides {
-  display: flex;
-  width: 2400%;
-  animation: jsSlide 96s linear infinite;
+  height: 500px;
+  max-width: 100%;
 }
 .js-slideshow .slides img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  flex-shrink: 0;
+  height: 500px;
+  max-width: 100%;
 }
 @keyframes jsSlide {
   0%   { transform: translateX(0%); }
