@@ -1,12 +1,10 @@
-
 <!DOCTYPE html>
-
 <html lang="ko">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>어썸네온</title>
-<style>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>어썸네온</title>
+  <style>
     body {
       margin: 0;
       padding: 0;
@@ -22,215 +20,169 @@
     }
 
     img {
-  -webkit-user-select: none;
-  -webkit-touch-callout: none;
-  user-select: none;
+      -webkit-user-select: none;
+      -webkit-touch-callout: none;
+      user-select: none;
       width: 100%;
       height: auto;
       display: block;
       margin-bottom: 20px;
     }
 
-    h1 {
-      font-size: 1.8em;
-      margin-bottom: 40px;
-    }
-  
-    body::-webkit-scrollbar {
-      width: 12px;
-    }
-
-    body::-webkit-scrollbar-track {
-      background: #eee;
+    .slideshow {
+      position: relative;
+      width: 100%;
+      max-width: 768px;
+      margin: 0 auto 20px auto;
+      overflow: hidden;
     }
 
-    body::-webkit-scrollbar-thumb {
-      background-color: #888;
-      border-radius: 4px;
+    .slides {
+      display: flex;
+      width: 2400%;
+      animation: slide 48s infinite;
     }
 
-    body::-webkit-scrollbar-thumb:hover {
-      background-color: #555;
+    .slides img {
+      width: 100%;
+      height: auto;
+      max-height: 300px;
+      object-fit: contain;
+      flex-shrink: 0;
     }
-    </style>
+
+    @keyframes slide {
+      0%   { transform: translateX(0%); }
+      4.16%  { transform: translateX(-100%); }
+      8.33%  { transform: translateX(-200%); }
+      12.5%  { transform: translateX(-300%); }
+      16.66% { transform: translateX(-400%); }
+      20.83% { transform: translateX(-500%); }
+      25%    { transform: translateX(-600%); }
+      29.16% { transform: translateX(-700%); }
+      33.33% { transform: translateX(-800%); }
+      37.5%  { transform: translateX(-900%); }
+      41.66% { transform: translateX(-1000%); }
+      45.83% { transform: translateX(-1100%); }
+      50%    { transform: translateX(-1200%); }
+      54.16% { transform: translateX(-1300%); }
+      58.33% { transform: translateX(-1400%); }
+      62.5%  { transform: translateX(-1500%); }
+      66.66% { transform: translateX(-1600%); }
+      70.83% { transform: translateX(-1700%); }
+      75%    { transform: translateX(-1800%); }
+      79.16% { transform: translateX(-1900%); }
+      83.33% { transform: translateX(-2000%); }
+      87.5%  { transform: translateX(-2100%); }
+      91.66% { transform: translateX(-2200%); }
+      95.83% { transform: translateX(-2300%); }
+      100%   { transform: translateX(0%); }
+    }
+
+    .kakao-link {
+      display: inline-block;
+      background-color: #fee500;
+      color: #000;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+  </style>
 </head>
 <body oncontextmenu="return false;">
-<div class="container">
-<!-- 여기에 이미지들 쭉 나열하면 됩니다 -->
-<img alt="1" src="images/1.png" style="margin: 15;"/>
-<img alt="2" src="images/2.jpg" style="margin: 0;"/>
-<img alt="3" src="images/3.gif" style="margin: 0;"/>
-<img alt="4" src="images/4.png" style="margin: 0;"/>
-<img alt="5" src="images/5.gif" style="margin: 0;"/>
-<img alt="5-1" src="images/5-1.jpg" style="margin: 0;"/>
-<img alt="6" src="images/6.png" style="margin: 0;"/>
-<img alt="6-1" src="images/6-1.png" style="margin: 0;"/>
-<img alt="6-2" src="images/6-2.jpg" style="margin: 0;"/>
-<img alt="7" src="images/7.png" style="margin: 0;"/>
-<img alt="8" src="images/8.gif" style="margin: 0;"/>
-<img alt="8-1" src="images/8-1.jpg" style="margin: 0;"/>
-<img alt="9" src="images/9.jpg" style="margin: 0;"/>
-<img alt="9" src="images/9-1.jpg" style="margin: 0;"/>
-<img alt="10" src="images/10.png" style="margin: 0;"/>
-<img alt="10-1" src="images/10-1.jpg" style="margin: 0;"/>
-<img alt="10-2" src="images/10-2.png" style="margin: 200;"/>
-<img alt="21" src="images/21.png" style="margin: 0;"/>
-<img alt="10-3" src="images/10-3.png" style="margin: 0;"/>
-<img alt="12-1" src="images/12-1.jpg" style="margin: 0;"/>
-<img alt="13" src="images/13.png" style="margin: 0;"/>
-<img alt="13-1" src="images/13-1.jpg" style="margin: 0;"/>
-<img alt="14" src="images/14.png" style="margin: 0;"/>
-<img alt="14-1" src="images/14-1.jpg" style="margin: 0;"/>
-<img alt="15" src="images/15.png" style="margin: 0;"/>
-<img alt="15-1" src="images/15-1.jpg" style="margin: 0;"/>
-<img alt="16" src="images/16.png" style="margin: 0;"/>
-<img alt="16-1" src="images/16-1.jpg" style="margin: 0;"/>
-<img alt="17" src="images/17.png" style="margin: 0;"/>
-<img alt="17-1" src="images/17-1.jpg" style="margin: 0;"/>
-<img alt="18" src="images/18.png" style="margin: 0;"/>
-<img alt="18-1" src="images/18-1.jpg" style="margin: 0;"/>
-<img alt="19" src="images/19.png" style="margin: 0;"/>
-<img alt="19-1" src="images/19-1.jpg" style="margin: 0;"/>
-<img alt="20" src="images/20.png" style="margin: 0;"/>
-<img alt="20-1" src="images/20-1.jpg" style="margin: 0;"/>
-  <!-- 카카오톡 채팅 링크 -->
-  <a class="kakao-link" href="https://pf.kakao.com/_yourchannel/chat" target="_blank">
-    💬 카카오톡 1:1 문의하기
-  </a>
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>어썸네온</title>
-<style>
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Noto Sans KR', sans-serif;
-    background: #fff;
-    text-align: center;
-  }
-  .container {
-    max-width: 768px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  img {
-    -webkit-user-select: none;
-    -webkit-touch-callout: none;
-    user-select: none;
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 20px;
-  }
-  .slideshow {
-    position: relative;
-    width: 100%;
-    max-width: 768px;
-    margin: 0 auto 20px auto;
-    overflow: hidden;
-  }
-  .slides {
-  display: flex;
-  width: 2400%;
-  animation: slide 48s infinite;
-}
-  .slides img {
-  width: 100%;
-  height: 300px;
-  max-height: 500px;
-  object-fit: contain;
-  flex-shrink: 0;
-  }
-  @keyframes slide {
-  0%   { transform: translateX(0%); }
-  4.16%  { transform: translateX(-100%); }
-  8.33%  { transform: translateX(-200%); }
-  12.5%  { transform: translateX(-300%); }
-  16.66% { transform: translateX(-400%); }
-  20.83% { transform: translateX(-500%); }
-  25%    { transform: translateX(-600%); }
-  29.16% { transform: translateX(-700%); }
-  33.33% { transform: translateX(-800%); }
-  37.5%  { transform: translateX(-900%); }
-  41.66% { transform: translateX(-1000%); }
-  45.83% { transform: translateX(-1100%); }
-  50%    { transform: translateX(-1200%); }
-  54.16% { transform: translateX(-1300%); }
-  58.33% { transform: translateX(-1400%); }
-  62.5%  { transform: translateX(-1500%); }
-  66.66% { transform: translateX(-1600%); }
-  70.83% { transform: translateX(-1700%); }
-  75%    { transform: translateX(-1800%); }
-  79.16% { transform: translateX(-1900%); }
-  83.33% { transform: translateX(-2000%); }
-  87.5%  { transform: translateX(-2100%); }
-  91.66% { transform: translateX(-2200%); }
-  95.83% { transform: translateX(-2300%); }
-  100%   { transform: translateX(0%); }
-}
-  .kakao-link {
-    display: inline-block;
-    background-color: #fee500;
-    color: #000;
-    padding: 10px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-bottom: 30px;
-  }
-</style>
-</head>
-<body oncontextmenu="return false;">
-<div class="container">
-  <!-- 슬라이드쇼 시작 -->
-  <div class="slideshow">
-    <div class="slides">
-      <img src="images/slide1.jpg" alt="슬라이드1">
-      <img src="images/slide2.jpg" alt="슬라이드2">
-      <img src="images/slide3.jpg" alt="슬라이드3">
-      <img src="images/slide4.jpg" alt="슬라이드3">
-      <img src="images/slide5.jpg" alt="슬라이드3">
-      <img src="images/slide6.jpg" alt="슬라이드3">
-      <img src="images/slide7.jpg" alt="슬라이드3">
-      <img src="images/slide8.jpg" alt="슬라이드3">
-      <img src="images/slide9.jpg" alt="슬라이드3">
-      <img src="images/slide10.jpg" alt="슬라이드3">
-      <img src="images/slide11.jpg" alt="슬라이드3">
-      <img src="images/slide12.jpg" alt="슬라이드3">
-      <img src="images/slide13.jpg" alt="슬라이드3">
-      <img src="images/slide14.jpg" alt="슬라이드3">
-      <img src="images/slide15.jpg" alt="슬라이드3">
-      <img src="images/slide16.jpg" alt="슬라이드3">
-      <img src="images/slide17.jpg" alt="슬라이드3">
-      <img src="images/slide18.jpg" alt="슬라이드3">
-      <img src="images/slide19.jpg" alt="슬라이드3">
-      <img src="images/slide20.jpg" alt="슬라이드3">
-      <img src="images/slide21.jpg" alt="슬라이드3">
-      <img src="images/slide22.jpg" alt="슬라이드3">
-      <img src="images/slide23.jpg" alt="슬라이드3">
-      <img src="images/slide24.jpg" alt="슬라이드3">
+  <div class="container">
+
+    <!-- 슬라이드쇼 시작 -->
+    <div class="slideshow">
+      <div class="slides">
+        <img src="images/slide1.jpg" alt="슬라이드1">
+        <img src="images/slide2.jpg" alt="슬라이드2">
+        <img src="images/slide3.jpg" alt="슬라이드3">
+        <img src="images/slide4.jpg" alt="슬라이드4">
+        <img src="images/slide5.jpg" alt="슬라이드5">
+        <img src="images/slide6.jpg" alt="슬라이드6">
+        <img src="images/slide7.jpg" alt="슬라이드7">
+        <img src="images/slide8.jpg" alt="슬라이드8">
+        <img src="images/slide9.jpg" alt="슬라이드9">
+        <img src="images/slide10.jpg" alt="슬라이드10">
+        <img src="images/slide11.jpg" alt="슬라이드11">
+        <img src="images/slide12.jpg" alt="슬라이드12">
+        <img src="images/slide13.jpg" alt="슬라이드13">
+        <img src="images/slide14.jpg" alt="슬라이드14">
+        <img src="images/slide15.jpg" alt="슬라이드15">
+        <img src="images/slide16.jpg" alt="슬라이드16">
+        <img src="images/slide17.jpg" alt="슬라이드17">
+        <img src="images/slide18.jpg" alt="슬라이드18">
+        <img src="images/slide19.jpg" alt="슬라이드19">
+        <img src="images/slide20.jpg" alt="슬라이드20">
+        <img src="images/slide21.jpg" alt="슬라이드21">
+        <img src="images/slide22.jpg" alt="슬라이드22">
+        <img src="images/slide23.jpg" alt="슬라이드23">
+        <img src="images/slide24.jpg" alt="슬라이드24">
+      </div>
     </div>
-  </div>
-  <!-- 슬라이드쇼 끝 -->
+    <!-- 슬라이드쇼 끝 -->
 
-<img alt="21-1" src="images/21-1.jpg" style="margin: 0;"/>
-<img alt="22-1" src="images/22-1.jpg" style="margin: 0;"/>
-<img alt="22-2" src="images/22-2.jpg" style="margin: 0;"/>
-<img alt="22-3" src="images/22-3.jpg" style="margin: 0;"/>
-<img alt="22-4" src="images/22-4.jpg" style="margin: 0;"/>
-<img alt="22-5" src="images/22-5.jpg" style="margin: 0;"/>
-<img alt="23-1" src="images/23-1.jpg" style="margin: 0;"/>
-<img alt="23-2" src="images/23-2.jpg" style="margin: 0;"/>
-<img alt="23-3" src="images/23-3.jpg" style="margin: 0;"/>
-<img alt="23-4" src="images/23-4.jpg" style="margin: 0;"/>
-<img alt="23-5" src="images/23-5.jpg" style="margin: 0;"/>
-<img alt="23-6" src="images/23-6.jpg" style="margin: 0;"/>
-<img alt="24" src="images/24.png"/>
-<img alt="25" src="images/25.png"/>
-<img alt="26" src="images/26.jpg"/>
-</div>
+    <!-- 이미지 나열 -->
+    <img src="images/1.png" alt="1" />
+    <img src="images/2.jpg" alt="2" />
+    <img src="images/3.gif" alt="3" />
+    <img src="images/4.png" alt="4" />
+    <img src="images/5.gif" alt="5" />
+    <img src="images/5-1.jpg" alt="5-1" />
+    <img src="images/6.png" alt="6" />
+    <img src="images/6-1.png" alt="6-1" />
+    <img src="images/6-2.jpg" alt="6-2" />
+    <img src="images/7.png" alt="7" />
+    <img src="images/8.gif" alt="8" />
+    <img src="images/8-1.jpg" alt="8-1" />
+    <img src="images/9.jpg" alt="9" />
+    <img src="images/9-1.jpg" alt="9-1" />
+    <img src="images/10.png" alt="10" />
+    <img src="images/10-1.jpg" alt="10-1" />
+    <img src="images/10-2.png" alt="10-2" />
+    <img src="images/21.png" alt="21" />
+    <img src="images/10-3.png" alt="10-3" />
+    <img src="images/12-1.jpg" alt="12-1" />
+    <img src="images/13.png" alt="13" />
+    <img src="images/13-1.jpg" alt="13-1" />
+    <img src="images/14.png" alt="14" />
+    <img src="images/14-1.jpg" alt="14-1" />
+    <img src="images/15.png" alt="15" />
+    <img src="images/15-1.jpg" alt="15-1" />
+    <img src="images/16.png" alt="16" />
+    <img src="images/16-1.jpg" alt="16-1" />
+    <img src="images/17.png" alt="17" />
+    <img src="images/17-1.jpg" alt="17-1" />
+    <img src="images/18.png" alt="18" />
+    <img src="images/18-1.jpg" alt="18-1" />
+    <img src="images/19.png" alt="19" />
+    <img src="images/19-1.jpg" alt="19-1" />
+    <img src="images/20.png" alt="20" />
+    <img src="images/20-1.jpg" alt="20-1" />
+    <img src="images/21-1.jpg" alt="21-1" />
+    <img src="images/22-1.jpg" alt="22-1" />
+    <img src="images/22-2.jpg" alt="22-2" />
+    <img src="images/22-3.jpg" alt="22-3" />
+    <img src="images/22-4.jpg" alt="22-4" />
+    <img src="images/22-5.jpg" alt="22-5" />
+    <img src="images/23-1.jpg" alt="23-1" />
+    <img src="images/23-2.jpg" alt="23-2" />
+    <img src="images/23-3.jpg" alt="23-3" />
+    <img src="images/23-4.jpg" alt="23-4" />
+    <img src="images/23-5.jpg" alt="23-5" />
+    <img src="images/23-6.jpg" alt="23-6" />
+    <img src="images/24.png" alt="24" />
+    <img src="images/25.png" alt="25" />
+    <img src="images/26.jpg" alt="26" />
+
+    <!-- 카카오톡 채팅 링크 -->
+    <a class="kakao-link" href="https://pf.kakao.com/_yourchannel/chat" target="_blank">
+      💬 카카오톡 1:1 문의하기
+    </a>
+
+  </div>
 </body>
 </html>
