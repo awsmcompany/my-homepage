@@ -88,26 +88,52 @@
   z-index: 1;
 }
 
+
 .js-slideshow {
   position: relative;
+  width: 100%;
   max-width: 768px;
-  margin: auto;
-  height: auto;
+  height: 300px;
+  margin: 0 auto 20px auto;
   overflow: hidden;
 }
-.js-slideshow img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  max-width: 100%;
-  max-height: 300px;
-  width: auto;
+.js-slideshow .slides {
+  display: flex;
+  width: 2400%;
+  animation: jsSlide 96s linear infinite;
+}
+.js-slideshow .slides img {
+  width: 100%;
   height: auto;
   object-fit: contain;
-  display: none;
+  flex-shrink: 0;
 }
-.js-slideshow img.active {
-  display: block;
+@keyframes jsSlide {
+  0%   { transform: translateX(0%); }
+  4.16%  { transform: translateX(-100%); }
+  8.33%  { transform: translateX(-200%); }
+  12.5%  { transform: translateX(-300%); }
+  16.66% { transform: translateX(-400%); }
+  20.83% { transform: translateX(-500%); }
+  25%    { transform: translateX(-600%); }
+  29.16% { transform: translateX(-700%); }
+  33.33% { transform: translateX(-800%); }
+  37.5%  { transform: translateX(-900%); }
+  41.66% { transform: translateX(-1000%); }
+  45.83% { transform: translateX(-1100%); }
+  50%    { transform: translateX(-1200%); }
+  54.16% { transform: translateX(-1300%); }
+  58.33% { transform: translateX(-1400%); }
+  62.5%  { transform: translateX(-1500%); }
+  66.66% { transform: translateX(-1600%); }
+  70.83% { transform: translateX(-1700%); }
+  75%    { transform: translateX(-1800%); }
+  79.16% { transform: translateX(-1900%); }
+  83.33% { transform: translateX(-2000%); }
+  87.5%  { transform: translateX(-2100%); }
+  91.66% { transform: translateX(-2200%); }
+  95.83% { transform: translateX(-2300%); }
+  100%   { transform: translateX(0%); }
 }
 </style>
 </head>
@@ -152,19 +178,7 @@
 <img alt="19-1" src="images/19-1.jpg"/>
 <img alt="20" src="images/20.png"/>
 <img alt="20-1" src="images/20-1.jpg"/>
-<div class="js-slideshow"><img alt="슬라이드1" class="active" src="images/slide1.jpg"/>
-<img alt="슬라이드2" class="" src="images/slide2.jpg"/>
-<img alt="슬라이드3" class="" src="images/slide3.jpg"/>
-<img alt="슬라이드4" class="" src="images/slide4.jpg"/>
-<img alt="슬라이드5" class="" src="images/slide5.jpg"/>
-<img alt="슬라이드6" class="" src="images/slide6.jpg"/>
-<img alt="슬라이드7" class="" src="images/slide7.jpg"/>
-<img alt="슬라이드8" class="" src="images/slide8.jpg"/>
-<img alt="슬라이드9" class="" src="images/slide9.jpg"/>
-<img alt="슬라이드10" class="" src="images/slide10.jpg"/>
-<img alt="슬라이드11" class="" src="images/slide11.jpg"/>
-<img alt="슬라이드12" class="" src="images/slide12.jpg"/>
-<img alt="슬라이드13" class="" src="images/slide13.jpg"><img alt="슬라이드14" class="" src="images/slide14.jpg"><img alt="슬라이드15" class="" src="images/slide15.jpg"><img alt="슬라이드16" class="" src="images/slide16.jpg"><img alt="슬라이드17" class="" src="images/slide17.jpg"><img alt="슬라이드18" class="" src="images/slide18.jpg"><img alt="슬라이드19" class="" src="images/slide19.jpg"><img alt="슬라이드20" class="" src="images/slide20.jpg"><img alt="슬라이드21" class="" src="images/slide21.jpg"><img alt="슬라이드22" class="" src="images/slide22.jpg"><img alt="슬라이드23" class="" src="images/slide23.jpg"><img alt="슬라이드24" class="" src="images/slide24.jpg"/></img></img></img></img></img></img></img></img></img></img></img></div><img alt="21-1" src="images/21-1.jpg"/>
+<div class="js-slideshow"><div class="slides"><img alt="슬라이드1" src="images/slide1.jpg"/><img alt="슬라이드2" src="images/slide2.jpg"/><img alt="슬라이드3" src="images/slide3.jpg"/><img alt="슬라이드4" src="images/slide4.jpg"/><img alt="슬라이드5" src="images/slide5.jpg"/><img alt="슬라이드6" src="images/slide6.jpg"/><img alt="슬라이드7" src="images/slide7.jpg"/><img alt="슬라이드8" src="images/slide8.jpg"/><img alt="슬라이드9" src="images/slide9.jpg"/><img alt="슬라이드10" src="images/slide10.jpg"/><img alt="슬라이드11" src="images/slide11.jpg"/><img alt="슬라이드12" src="images/slide12.jpg"/><img alt="슬라이드13" src="images/slide13.jpg"/><img alt="슬라이드14" src="images/slide14.jpg"/><img alt="슬라이드15" src="images/slide15.jpg"/><img alt="슬라이드16" src="images/slide16.jpg"/><img alt="슬라이드17" src="images/slide17.jpg"/><img alt="슬라이드18" src="images/slide18.jpg"/><img alt="슬라이드19" src="images/slide19.jpg"/><img alt="슬라이드20" src="images/slide20.jpg"/><img alt="슬라이드21" src="images/slide21.jpg"/><img alt="슬라이드22" src="images/slide22.jpg"/><img alt="슬라이드23" src="images/slide23.jpg"/><img alt="슬라이드24" src="images/slide24.jpg"/></div></div><img alt="21-1" src="images/21-1.jpg"/>
 <img alt="22-1" src="images/22-1.jpg"/>
 <img alt="22-2" src="images/22-2.jpg"/>
 <img alt="22-3" src="images/22-3.jpg"/>
@@ -184,13 +198,5 @@
       💬 카카오톡 1:1 문의하기
     </a>
 </div>
-<script>
-let current = 0;
-const slides = document.querySelectorAll('.js-slideshow img');
-setInterval(() => {
-  slides[current].classList.remove('active');
-  current = (current + 1) % slides.length;
-  slides[current].classList.add('active');
-}, 4000);
-</script></body>
+</body>
 </html>
