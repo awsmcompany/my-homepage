@@ -30,30 +30,9 @@
       margin-bottom: 20px;
     }
 
-    .slideshow {
-      position: relative;
-      width: 100%;
-      max-width: 768px;
-      margin: 0 auto 20px auto;
-      overflow: hidden;
-    }
 
-    .slides {
-      display: flex;
-      width: 2400%;
-      animation: slide 48s infinite linear;
-    }
 
-    .slides img {
-      width: 100%;
-      height: auto;
-      max-height: 300px;
-      object-fit: contain;
-      flex-shrink: 0;
-    }
 
-    @keyframes slide {
-      0%   { transform: translateX(0%); }
       4.16%  { transform: translateX(-100%); }
       8.33%  { transform: translateX(-200%); }
       12.5%  { transform: translateX(-300%); }
@@ -90,78 +69,95 @@
       font-weight: bold;
       margin-bottom: 30px;
     }
-  </style>
+  
+.js-slideshow {
+  position: relative;
+  max-width: 768px;
+  margin: auto;
+  height: 300px;
+  overflow: hidden;
+}
+.js-slideshow img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-height: 300px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.js-slideshow img.active {
+  opacity: 1;
+  z-index: 1;
+}
+</style>
 </head>
 <body oncontextmenu="return false;">
 <div class="container">
 <!-- 슬라이드쇼 시작 -->
-
 <!-- 슬라이드쇼 끝 -->
 <!-- 이미지 나열 -->
-<img alt="1" src="images/1.png">
-<img alt="2" src="images/2.jpg">
-<img alt="3" src="images/3.gif">
-<img alt="4" src="images/4.png">
-<img alt="5" src="images/5.gif">
-<img alt="5-1" src="images/5-1.jpg">
-<img alt="6" src="images/6.png">
-<img alt="6-1" src="images/6-1.png">
-<img alt="6-2" src="images/6-2.jpg">
-<img alt="7" src="images/7.png">
-<img alt="8" src="images/8.gif">
-<img alt="8-1" src="images/8-1.jpg">
-<img alt="9" src="images/9.jpg">
-<img alt="9-1" src="images/9-1.jpg">
-<img alt="10" src="images/10.png">
-<img alt="10-1" src="images/10-1.jpg">
-<img alt="10-2" src="images/10-2.png">
-<img alt="21" src="images/21.png">
-<img alt="10-3" src="images/10-3.png">
-<img alt="12-1" src="images/12-1.jpg">
-<img alt="13" src="images/13.png">
-<img alt="13-1" src="images/13-1.jpg">
-<img alt="14" src="images/14.png">
-<img alt="14-1" src="images/14-1.jpg">
-<img alt="15" src="images/15.png"/>
-<img alt="15-1" src="images/15-1.jpg"/>
-<img alt="16" src="images/16.png"/>
-<img alt="16-1" src="images/16-1.jpg"/>
-<img alt="17" src="images/17.png"/>
-<img alt="17-1" src="images/17-1.jpg"/>
-<img alt="18" src="images/18.png"/>
-<img alt="18-1" src="images/18-1.jpg"/>
-<img alt="19" src="images/19.png"/>
-<img alt="19-1" src="images/19-1.jpg"/>
-<img alt="20" src="images/20.png"/>
-<img alt="20-1" src="images/20-1.jpg"/>
-<div class="slideshow">
-<div class="slides">
-<img alt="슬라이드1" src="images/slide1.jpg"/>
-<img alt="슬라이드2" src="images/slide2.jpg"/>
-<img alt="슬라이드3" src="images/slide3.jpg"/>
-<img alt="슬라이드4" src="images/slide4.jpg"/>
-<img alt="슬라이드5" src="images/slide5.jpg"/>
-<img alt="슬라이드6" src="images/slide6.jpg"/>
-<img alt="슬라이드7" src="images/slide7.jpg"/>
-<img alt="슬라이드8" src="images/slide8.jpg"/>
-<img alt="슬라이드9" src="images/slide9.jpg"/>
-<img alt="슬라이드10" src="images/slide10.jpg"/>
-<img alt="슬라이드11" src="images/slide11.jpg"/>
-<img alt="슬라이드12" src="images/slide12.jpg"/>
-<img alt="슬라이드13" src="images/slide13.jpg"/>
-<img alt="슬라이드14" src="images/slide14.jpg"/>
-<img alt="슬라이드15" src="images/slide15.jpg"/>
-<img alt="슬라이드16" src="images/slide16.jpg"/>
-<img alt="슬라이드17" src="images/slide17.jpg"/>
-<img alt="슬라이드18" src="images/slide18.jpg"/>
-<img alt="슬라이드19" src="images/slide19.jpg"/>
-<img alt="슬라이드20" src="images/slide20.jpg"/>
-<img alt="슬라이드21" src="images/slide21.jpg"/>
-<img alt="슬라이드22" src="images/slide22.jpg"/>
-<img alt="슬라이드23" src="images/slide23.jpg"/>
-<img alt="슬라이드24" src="images/slide24.jpg"/>
-</div>
-</div><img alt="21-1" src="images/21-1.jpg"/>
+<img alt="1" src="images/1.png"/>
+<img alt="2" src="images/2.jpg"/>
+<img alt="3" src="images/3.gif"/>
+<img alt="4" src="images/4.png"/>
+<img alt="5" src="images/5.gif"/>
+<img alt="5-1" src="images/5-1.jpg"/>
+<img alt="6" src="images/6.png"/>
+<img alt="6-1" src="images/6-1.png"/>
+<img alt="6-2" src="images/6-2.jpg"/>
+<img alt="7" src="images/7.png"/>
+<img alt="8" src="images/8.gif"/>
+<img alt="8-1" src="images/8-1.jpg"/>
+<img alt="9" src="images/9.jpg"/>
+<img alt="9-1" src="images/9-1.jpg"/>
+<img alt="10" src="images/10.png"/>
+<img alt="10-1" src="images/10-1.jpg"/>
+<img alt="10-2" src="images/10-2.png"/>
+<img alt="21" src="images/21.png"/>
+<img alt="10-3" src="images/10-3.png"/>
+<img alt="12-1" src="images/12-1.jpg"/>
+<img alt="13" src="images/13.png"/>
+<img alt="13-1" src="images/13-1.jpg"/>
+<img alt="14" src="images/14.png"/>
+<img alt="14-1" src="images/14-1.jpg"/>
+<img alt="15" src="images/15.png">
+<img alt="15-1" src="images/15-1.jpg">
+<img alt="16" src="images/16.png">
+<img alt="16-1" src="images/16-1.jpg">
+<img alt="17" src="images/17.png">
+<img alt="17-1" src="images/17-1.jpg">
+<img alt="18" src="images/18.png">
+<img alt="18-1" src="images/18-1.jpg">
+<img alt="19" src="images/19.png">
+<img alt="19-1" src="images/19-1.jpg">
+<img alt="20" src="images/20.png">
+<img alt="20-1" src="images/20-1.jpg">
+<div class="js-slideshow"><img alt="슬라이드1" class="active" src="images/slide1.jpg">
+</img><img alt="슬라이드2" class="" src="images/slide2.jpg">
+</img><img alt="슬라이드3" class="" src="images/slide3.jpg">
+</img><img alt="슬라이드4" class="" src="images/slide4.jpg">
+</img><img alt="슬라이드5" class="" src="images/slide5.jpg">
+</img><img alt="슬라이드6" class="" src="images/slide6.jpg">
+</img><img alt="슬라이드7" class="" src="images/slide7.jpg">
+</img><img alt="슬라이드8" class="" src="images/slide8.jpg">
+</img><img alt="슬라이드9" class="" src="images/slide9.jpg">
+</img><img alt="슬라이드10" class="" src="images/slide10.jpg">
+</img><img alt="슬라이드11" class="" src="images/slide11.jpg">
+</img><img alt="슬라이드12" class="" src="images/slide12.jpg">
+
+
+
+
+
+
+
+
+
+
+
+
+</img><img alt="슬라이드13" class="" src="images/slide13.jpg"/><img alt="슬라이드14" class="" src="images/slide14.jpg"/><img alt="슬라이드15" class="" src="images/slide15.jpg"/><img alt="슬라이드16" class="" src="images/slide16.jpg"/><img alt="슬라이드17" class="" src="images/slide17.jpg"/><img alt="슬라이드18" class="" src="images/slide18.jpg"/><img alt="슬라이드19" class="" src="images/slide19.jpg"/><img alt="슬라이드20" class="" src="images/slide20.jpg"/><img alt="슬라이드21" class="" src="images/slide21.jpg"/><img alt="슬라이드22" class="" src="images/slide22.jpg"/><img alt="슬라이드23" class="" src="images/slide23.jpg"/><img alt="슬라이드24" class="" src="images/slide24.jpg"/></div><img alt="21-1" src="images/21-1.jpg"/>
 <img alt="22-1" src="images/22-1.jpg"/>
 <img alt="22-2" src="images/22-2.jpg"/>
 <img alt="22-3" src="images/22-3.jpg"/>
@@ -180,6 +176,14 @@
 <a class="kakao-link" href="https://pf.kakao.com/_yourchannel/chat" target="_blank">
       💬 카카오톡 1:1 문의하기
     </a>
-</img></img></img></img></img></img></img></img></img></img></img></img></img></img></img></img></img></img></img></img></img></img></img></img></div>
-</body>
+</img></img></img></img></img></img></img></img></img></img></img></img></div>
+<script>
+let current = 0;
+const slides = document.querySelectorAll('.js-slideshow img');
+setInterval(() => {
+  slides[current].classList.remove('active');
+  current = (current + 1) % slides.length;
+  slides[current].classList.add('active');
+}, 4000);
+</script></body>
 </html>
