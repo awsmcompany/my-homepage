@@ -133,11 +133,10 @@
     overflow: hidden;
   }
   .slides {
-    display: flex;
-    width: 300%;
-    animation: slide 9s infinite;
-    height: auto;
-  }
+  display: flex;
+  width: 2400%;
+  animation: slide 48s infinite;
+}
   .slides img {
   width: 100%;
   height: 300px
@@ -146,11 +145,32 @@
   flex-shrink: 0;
   }
   @keyframes slide {
-    0% { transform: translateX(0%); }
-    33% { transform: translateX(-100%); }
-    66% { transform: translateX(-200%); }
-    100% { transform: translateX(0%); }
-  }
+  0%   { transform: translateX(0%); }
+  4.16%  { transform: translateX(-100%); }
+  8.33%  { transform: translateX(-200%); }
+  12.5%  { transform: translateX(-300%); }
+  16.66% { transform: translateX(-400%); }
+  20.83% { transform: translateX(-500%); }
+  25%    { transform: translateX(-600%); }
+  29.16% { transform: translateX(-700%); }
+  33.33% { transform: translateX(-800%); }
+  37.5%  { transform: translateX(-900%); }
+  41.66% { transform: translateX(-1000%); }
+  45.83% { transform: translateX(-1100%); }
+  50%    { transform: translateX(-1200%); }
+  54.16% { transform: translateX(-1300%); }
+  58.33% { transform: translateX(-1400%); }
+  62.5%  { transform: translateX(-1500%); }
+  66.66% { transform: translateX(-1600%); }
+  70.83% { transform: translateX(-1700%); }
+  75%    { transform: translateX(-1800%); }
+  79.16% { transform: translateX(-1900%); }
+  83.33% { transform: translateX(-2000%); }
+  87.5%  { transform: translateX(-2100%); }
+  91.66% { transform: translateX(-2200%); }
+  95.83% { transform: translateX(-2300%); }
+  100%   { transform: translateX(0%); }
+}
   .kakao-link {
     display: inline-block;
     background-color: #fee500;
