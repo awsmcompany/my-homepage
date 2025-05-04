@@ -11,6 +11,7 @@
     font-family: 'Noto Sans KR', sans-serif;
     background: #fff;
     text-align: center;
+    overflow-x: hidden;
   }
   .container {
     max-width: 768px;
@@ -27,16 +28,18 @@
     margin-bottom: 20px;
   }
   .slideshow {
-    width: 500px;
-    height: 500px;
+    width: 100%;       /* 고정값 → 전체 너비 */
+    max-width: 500px;  /* 최대 너비 제한 */
+    aspect-ratio: 1/1; /* 정사각형 유지 (height 제거) */
     overflow: hidden;
     margin: 0 auto 20px auto;
     position: relative;
   }
-  .slides-wrapper {
-    display: flex;
-    transition: transform 1s ease-in-out;
+  .slides-wrapper img {
+    width: 100%;        /* 고정값 500px → 슬라이드 너비 100% */
     height: 100%;
+    object-fit: contain;
+    flex-shrink: 0;
   }
   .slides-wrapper img {
     width: 500px;
@@ -146,10 +149,11 @@
   const slideCount = slideWrapper.children.length;
   let currentIndex = 0;
 
-  setInterval(() => {
+   setInterval(() => {
     currentIndex = (currentIndex + 1) % slideCount;
-    slideWrapper.style.transform = `translateX(-${currentIndex * 500}px)`;
-  }, 3000);
+    const slideWidth = document.querySelector('.slideshow').clientWidth;
+    slideWrapper.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+}, 3000);
 </script>
 </body>
 </html>
