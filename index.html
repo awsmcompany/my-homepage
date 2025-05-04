@@ -1,3 +1,7 @@
+<div class="scroll-banner">
+  <div class="scroll-content">🎉 어썸네온 신상품 출시! 카톡 문의 시 혜택 증정! 🎉</div>
+</div>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -71,6 +75,33 @@
     font-weight: bold;
     margin-bottom: 30px;
   }
+
+.scroll-banner {
+  width: 100%;
+  overflow: hidden;
+  background: #000;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.scroll-content {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: scroll-left 15s linear infinite;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 </style>
 </head>
 <body oncontextmenu="return false;">
