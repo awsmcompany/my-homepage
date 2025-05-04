@@ -1,5 +1,6 @@
 <div class="scroll-banner">
-  <div class="scroll-content">✅ 어썸네온은 광고간판업체를 위한 전문 네온 제작 파트너입니다✅        🚚 전국 택배 납품 가능, 빠른 제작 일정 문의주세요!🚚</div>
+  <div class="scroll-content">✔️ 어썸네온은 광고간판업체를 위한 전문 네온 제작 파트너입니다✔️</div>
+🚚 전국 택배 납품 가능, 빠른 제작 일정 문의주세요!🚚
 </div>
 
 <!DOCTYPE html>
@@ -81,16 +82,24 @@
   overflow: hidden;
   background: #000;
   color: #fff;
-  padding: 10px 0;
+  padding: 12px 0;
 }
 
 .scroll-content {
   display: inline-block;
   white-space: nowrap;
   padding-left: 100%;
-  animation: scroll-left 15s linear infinite;
-  font-weight: bold;
-  font-size: 1rem;
+  animation: scroll-left 15s linear infinite; /* 기본 속도: 모바일용 */
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+}
+
+/* PC일 때만 속도 느리게 (예: 20초로 증가) */
+@media (min-width: 768px) {
+  .scroll-content {
+    animation-duration: 20s; /* PC에선 느리게 */
+  }
 }
 
 @keyframes scroll-left {
