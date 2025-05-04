@@ -28,25 +28,36 @@
     margin-bottom: 20px;
   }
   .slideshow {
-    width: 100%;       /* 고정값 → 전체 너비 */
-    max-width: 500px;  /* 최대 너비 제한 */
-    aspect-ratio: 1/1; /* 정사각형 유지 (height 제거) */
-    overflow: hidden;
-    margin: 0 auto 20px auto;
-    position: relative;
-  }
-  .slides-wrapper img {
-    width: 100%;        /* 고정값 500px → 슬라이드 너비 100% */
-    height: 100%;
-    object-fit: contain;
-    flex-shrink: 0;
-  }
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  margin: 0 auto 20px auto;
+  position: relative;
+}
+
+.slides-wrapper {
+  display: flex;
+  width: calc(100% * 24); /* 슬라이드 수만큼 곱하세요 */
+  height: 100%;
+  transition: transform 1s ease-in-out;
+}
+
+/* 기본: 모바일 기준 */
+.slides-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* PC 이상일 때는 500px 고정 */
+@media (min-width: 768px) {
   .slides-wrapper img {
     width: 500px;
     height: 500px;
-    object-fit: contain;
-    flex-shrink: 0;
   }
+}
   .kakao-link {
     display: inline-block;
     background-color: #fee500;
@@ -149,11 +160,18 @@
   const slideCount = slideWrapper.children.length;
   let currentIndex = 0;
 
-   setInterval(() => {
-    currentIndex = (currentIndex + 1) % slideCount;
+  function updateSlide() {
     const slideWidth = document.querySelector('.slideshow').clientWidth;
     slideWrapper.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-}, 3000);
+  }
+
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % slideCount;
+    updateSlide();
+  }, 3000);
+
+  window.addEventListener('load', updateSlide);
+  window.addEventListener('resize', updateSlide);
 </script>
 </body>
 </html>
