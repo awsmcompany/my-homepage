@@ -42,7 +42,6 @@
 
 .slides-wrapper {
   display: flex;
-  width: calc(100% * 24); /* 슬라이드 수만큼 곱하세요 */
   height: 100%;
   transition: transform 1s ease-in-out;
 }
@@ -171,13 +170,16 @@
   <img alt="25" src="images/25.png" />
   <img alt="26" src="images/26.jpg" />
 </div>
+
+
 <script>
   const slideWrapper = document.getElementById('slideWrapper');
-  const slideCount = slideWrapper.children.length;
+  const slides = slideWrapper.children;
+  const slideCount = slides.length;
   let currentIndex = 0;
 
   function updateSlide() {
-    const slideWidth = document.querySelector('.slideshow').clientWidth;
+    const slideWidth = slides[0].clientWidth; // 슬라이드 이미지 너비 측정
     slideWrapper.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
   }
 
